@@ -39,7 +39,7 @@ const getImages = (query) => {
       if(data.hits.length > 0)
         showImages(data.hits);
       else
-        alert("Oops! Search not found.");
+        alert("Search not found !!");
     })
     .catch(err => console.log(err))
 }
@@ -63,7 +63,7 @@ const createSlider = () => {
   const inputTime = document.getElementById('duration').value || 1000;    
   if(inputTime !== 1000){
     if(inputTime.match(/^-\d+$/)){   
-      alert("Time can not be negative");
+      alert("Please Put a Positive Value for Duration Time");
       return;
      }
   } 
@@ -71,7 +71,7 @@ const createSlider = () => {
 
    // check slider image length
   if (sliders.length < 2) {
-    alert('Select at least 2 image.')
+    alert(' Please Select At Least 2 Image.')
     return;
   }
 
